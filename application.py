@@ -52,6 +52,11 @@ def load_user(user_id):
     return db.session.get(User, user_id)
 
 
+@application.route("/")
+def initial():
+    return "Welcome to the E-commerce API"
+
+
 @application.route("/login", methods=["POST"])
 def login():
     data = request.json
